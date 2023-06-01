@@ -1,16 +1,31 @@
 
 from binance.client import Client
+import sys
 import os
+import pandas
+import numpy
+
+base_dir = 'C:\\Users\\suat.tuncer\\OneDrive - ICRYPEX BILISIM A.S\\Documents\\GitHub\creds\\'
+
+sys.path.append(os.path.abspath(base_dir))
+
+from bnb_creds import api_key, api_secret
+
+
 
 #print ("Input examples: pair= 'BTCUSDT' interval = Client.KLINE_INTERVAL_1MINUTE OR DAY OR HOUR start = '4 Aug, 2022' finish = '5 Aug, 2022'","get_hist_data(pair, interval,start,finish)")
 def get_hist_data(pair,interval, start,finish):
   import pandas as pd
-  api_key = 'willbegetted'
-  api_secret = 'willbegetted'
+  api_key = api_key
+  api_secret = api_secret
   client = Client(api_key,api_secret)
   klines = client.get_historical_klines(str(pair), interval, str(start), str(finish))
   df = pd.DataFrame(klines, columns =['Open time','Open','High','Low','Close','Volume','Close time','Quote asset volume','Number of trades','Taker buy base asset volume','Taker buy quote asset volume','Ignore'], dtype = float) 
   return df
+
+
+
+#This part must be revised
 import pandas as pd
 def multivar_data(curr_list):
     pair= 'BTCUSDT' 
