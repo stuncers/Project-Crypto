@@ -1,3 +1,0 @@
-# .gitignore 
-api_key = 'u3AEqqDT8RrzvsHiObIsjcZTZcSLszQ8UKccV8SzAnV9JTPabRVVzDHEOtpqomQW'
-api_secret = 'SoR5HKGycb2OhLkIbyIXEzZDqfgCBHaNXxTu3cqH32fyNbFlvmiLUSiHu1mKcvvU'
