@@ -3,8 +3,8 @@ from binance.client import Client
 #print ("Input examples: pair= 'BTCUSDT' interval = Client.KLINE_INTERVAL_1MINUTE OR DAY OR HOUR start = '4 Aug, 2022' finish = '5 Aug, 2022'","get_hist_data(pair, interval,start,finish)")
 def get_hist_data(pair,interval, start,finish):
   import pandas as pd
-  api_key = 'u3AEqqDT8RrzvsHiObIsjcZTZcSLszQ8UKccV8SzAnV9JTPabRVVzDHEOtpqomQW'
-  api_secret = 'SoR5HKGycb2OhLkIbyIXEzZDqfgCBHaNXxTu3cqH32fyNbFlvmiLUSiHu1mKcvvU'
+  api_key = 'willbegetted'
+  api_secret = 'willbegetted'
   client = Client(api_key,api_secret)
   klines = client.get_historical_klines(str(pair), interval, str(start), str(finish))
   df = pd.DataFrame(klines, columns =['Open time','Open','High','Low','Close','Volume','Close time','Quote asset volume','Number of trades','Taker buy base asset volume','Taker buy quote asset volume','Ignore'], dtype = float) 
