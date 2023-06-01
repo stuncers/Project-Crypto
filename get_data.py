@@ -1,5 +1,7 @@
 
 from binance.client import Client
+import os
+
 #print ("Input examples: pair= 'BTCUSDT' interval = Client.KLINE_INTERVAL_1MINUTE OR DAY OR HOUR start = '4 Aug, 2022' finish = '5 Aug, 2022'","get_hist_data(pair, interval,start,finish)")
 def get_hist_data(pair,interval, start,finish):
   import pandas as pd
@@ -31,9 +33,19 @@ def multivar_data(curr_list):
         var_name= var_name[['sec_0',str(i)+'_Close']]
         df_merged = pd.merge(var_name, df_merged, how='inner', on=['sec_0'])
     return df_merged
+
+
+
+
+
+
+
+
+
+
 # have to get curr_list over here
   #curr_list = ['BUSDUSDT','ETHUSDT','BNBUSDT' ,'XRPUSDT' ,
-             'ADAUSDT','DOGEUSDT','MATICUSDT' ,'SOLUSDT','DOTUSDT','LTCUSDT','AVAXUSDT']
+  #           'ADAUSDT','DOGEUSDT','MATICUSDT' ,'SOLUSDT','DOTUSDT','LTCUSDT','AVAXUSDT']
 merged = multivar_data(curr_list)
 #merged.head()
 #sec_0	AVAXUSDT_Close	LTCUSDT_Close	DOTUSDT_Close	SOLUSDT_Close	MATICUSDT_Close	DOGEUSDT_Close	ADAUSDT_Close	XRPUSDT_Close	BNBUSDT_Close	ETHUSDT_Close	BUSDUSDT_Close	BTCUSDT_Close
@@ -44,6 +56,20 @@ merged = multivar_data(curr_list)
 #4	2020-09-22 10:59:59	5.4901	43.75	4.0494	2.7847	0.01932	0.002634	0.08198	0.23197	23.8488	341.00	1.0002	10458.40
 len(merged)
 21332
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Set up the webdriver
 import pandas as pd
 from selenium.webdriver.common.by import By
