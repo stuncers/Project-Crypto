@@ -25,7 +25,7 @@ def get_hist_data(pair,interval, start,finish):
 
 
 
-#This part must be revised
+#This part must be revised - all the data should be saved as itself
 import pandas as pd
 def multivar_data(curr_list):
     pair= 'BTCUSDT' 
